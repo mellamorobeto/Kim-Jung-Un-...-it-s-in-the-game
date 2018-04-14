@@ -1,0 +1,243 @@
+body{
+	margin: 0;
+	font-family: monospace;
+}
+
+.hidingBlock{
+	height: 300px;
+	width: 300px;
+	background-color: whitesmoke;
+	opacity: 1;
+	z-index: 1;
+	box-shadow: 1px 1px 10px black;
+	transition: 1s;
+	background-image: url('http://flags.fmcdn.net/data/flags/w580/kp.png');
+}
+
+.hidedBlock{
+	height: 70px;
+	width: 70px;
+	position: absolute;
+	transition: 0.5s;
+	z-index: -1;
+	-webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.container{
+	height: 550px;
+	width: 800px;
+	margin: 0 auto;
+	opacity: 0.99;
+	text-align: center;
+	transition: 1s;
+	background-color: white;
+	box-shadow: 1px 1px 10px black;
+	background-image: url("http://www.juvanamedica.com/wp-content/uploads/2016/05/Fotolia_47574226_S.jpg");
+}
+
+.backgroundText{
+	position: absolute;
+	margin-top: -150px;
+	margin-left: 80px;
+	font-size: 120px;
+	display: none;
+}
+.alternativeTxt{
+	position: absolute;
+	margin-top: -150px;
+	margin-left: 80px;
+	font-size: 120px;
+	display: none;
+}
+
+.livesContainer, .score{
+	position: absolute;
+	z-index: 99;
+	opacity: 1;
+	pointer-events: none;
+}
+
+.livesContainer{
+	margin-top: 60px;
+	margin-left: 14px;
+}
+
+
+.score{
+	font-size: 55px;
+	margin-left: 12px;
+}
+
+.bonus{
+	display: none;
+	width: 80px;
+	height: 80px;
+	position: absolute;
+	-webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.life{
+	display: none;
+	position: absolute;
+	width: 80px;
+	height: 80px;
+	-webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+
+.backgroundText{
+	margin-left: 300px;
+	opacity: 0.5;
+	pointer-events: none;
+}
+
+.alternativeTxt{
+	pointer-events: none;
+}
+.scientist{
+	transition: 1s;
+	width: 70px;
+	height: 70px;
+	pointer-events: none;
+}
+
+#flw{
+	position: absolute;
+	-webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+	pointer-events: none;
+	display: none;
+}
+
+.modal{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: black;
+	opacity: 0.6;
+	z-index: 99;
+}
+
+.play{
+	width: 200px;
+	height: 50px;
+	margin-left: 45%;
+	margin-top: 250px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+	position: absolute;
+	background-color: white;
+	border-radius: 8px;
+	border-color: dodgerblue;
+	z-index: 99;
+}
+
+.play:hover{
+	background-color: dodgerblue;
+}
+
+.backgroundAll{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: 0;
+	-webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.opponentImg{
+	margin-top: -1000px;
+	z-index: 1;
+	position: absolute;
+	transition: 1s;
+	-webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+	cursor: default;
+	display: none;
+}
+
+.bulle{
+	width: 250px;
+	height: 75px;
+	background-color: white;
+	border-radius: 5px;
+	border: solid 2px;
+	border-color: black;
+	position: absolute;
+	margin-top: 450px;
+	margin-left: 3%;
+	z-index: 99;
+	font-size: 20px;
+	text-align: center;
+	display: none;
+}
+
+.kimTxt{
+	width: 250px;
+	height: 75px;
+	background-color: white;
+	border-radius: 5px;
+	border: solid 2px;
+	border-color: black;
+	position: absolute;
+	margin-top: 400px;
+	margin-left:80%;
+	z-index: 99;
+	font-size: 20px;
+	text-align: center;
+	display: none;
+}
+
+.titre{
+	margin: 0 auto;
+
+	z-index: 1000;
+}
+
+/****************responsive******************/
+.responsive{
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 10px;
+	grid-auto-rows: minmax(100px, auto);
+	max-width: 100%;
+}
+
+.container{
+	grid-column: 2;
+	grid-row: 2;
+}
+
+.opponentImg, .bulle{
+	grid-column: 1;
+	grid-row: 2;
+}
+
+/*@media (max-width: 800px){
+	.container{
+		grid-column: 1;
+		grid-row: 2;
+		width: 500px;
+		height: 300px;
+	}-
+
+	.hidingBlock{
+		width: 100px;
+		height: 100px;
+	}
+}*/
